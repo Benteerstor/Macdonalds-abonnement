@@ -12,7 +12,7 @@ void draw(){
   
   float Kasse = random(50, 60);
   
-  fill(Size+(KasseX + KasseY) / 20, Size, 120);
+  fill(Size+(KasseX + KasseY) / 10, Size, 20);
   
   rect(KasseX, KasseY, Kasse , Kasse);
   
