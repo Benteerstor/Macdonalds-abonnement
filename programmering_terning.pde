@@ -1,4 +1,4 @@
-int[] numbers = new int [31];  //indeholder vores terningekast
+int[] numre = new int [31];  //indeholder vores terningekast
 int counter = 0;               //holder øje med hvilke tal vi nået til
 
 int en = 0;                  //tæller alle vores værdier fra 1-6
@@ -46,7 +46,7 @@ void keyPressed() {
 
 int lavTerningeKast(int min, int max){        
   int nyKast = int(random(min,max));         //Laver terningekast tal.
-  numbers[counter] = nyKast;                 
+  numre[counter] = nyKast;                 
   
   if(nyKast==1)en++;                       //tjekker nye kast
   if(nyKast==2)to++;                       
@@ -59,7 +59,7 @@ int lavTerningeKast(int min, int max){
 
 void udskrivKast(){
   for(int b=1;b<=counter;b++){                      //laver selve talrækken
-  text("Kast "+b+": "+numbers[b],600,50+20*b);      //viser kastet
+  text("Kast "+b+": "+numre[b],600,50+20*b);      //viser kastet
   }
 }
 
@@ -72,7 +72,7 @@ void fjernSidsteKast(){
   if(numbers[counter]==6)seks--;                   
   
   counter--;                            
-  text("DIT KAST BLEV:" + numbers[counter], 50, 75); 
+  text("DIT KAST BLEV:" + numbre[counter], 50, 75); 
 }
 
 void tegnFordeling(){   
