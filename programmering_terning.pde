@@ -1,12 +1,12 @@
 int[] numbers = new int [31];  //indeholder vores terningekast
 int counter = 0;               //holder øje med hvilke tal vi nået til
 
-int ones = 0;                  //tæller alle vores værdier fra 1-6
-int twos = 0;                  
-int threes = 0;                
-int fours = 0;                 
-int fives = 0;                 
-int sixes = 0;                 
+int en = 0;                  //tæller alle vores værdier fra 1-6
+int to = 0;                  
+int tre = 0;                
+int fire = 0;                 
+int fem = 0;                 
+int seks = 0;                 
 
 void setup() {
   size(800, 800);
@@ -48,12 +48,12 @@ int lavTerningeKast(int min, int max){
   int nyKast = int(random(min,max));         //Laver terningekast tal.
   numbers[counter] = nyKast;                 
   
-  if(nyKast==1)ones++;                       //tjekker nye kast
-  if(nyKast==2)twos++;                       
-  if(nyKast==3)threes++;                     
-  if(nyKast==4)fours++;                      
-  if(nyKast==5)fives++;                      
-  if(nyKast==6)sixes++;                    
+  if(nyKast==1)en++;                       //tjekker nye kast
+  if(nyKast==2)to++;                       
+  if(nyKast==3)tre++;                     
+  if(nyKast==4)fire++;                      
+  if(nyKast==5)fem++;                      
+  if(nyKast==6)seks++;                    
   return nyKast;
 }  
 
@@ -64,12 +64,12 @@ void udskrivKast(){
 }
 
 void fjernSidsteKast(){
-  if(numbers[counter]==1)ones--;                    //fjerning af værdier(en ad gangen)'
-  if(numbers[counter]==2)twos--;                    
-  if(numbers[counter]==3)threes--;                  
-  if(numbers[counter]==4)fours--;                   
-  if(numbers[counter]==5)fives--;                   
-  if(numbers[counter]==6)sixes--;                   
+  if(numbers[counter]==1)en--;                    //fjerning af værdier(en ad gangen)'
+  if(numbers[counter]==2)to--;                    
+  if(numbers[counter]==3)tre--;                  
+  if(numbers[counter]==4)fire--;                   
+  if(numbers[counter]==5)fem--;                   
+  if(numbers[counter]==6)seks--;                   
   
   counter--;                            
   text("DIT KAST BLEV:" + numbers[counter], 50, 75); 
@@ -83,11 +83,11 @@ void tegnFordeling(){
   }
   
   textSize(14);
-  rect(55,670,45,ones*-20);     text(ones+" stk",60,660-ones*20);            //laver diagram.
-  rect(105,670,45,twos*-20);    text(twos+" stk",110,660-twos*20);           
-  rect(155,670,45,threes*-20);  text(threes+" stk",160,660-threes*20);       
-  rect(205,670,45,fours*-20);   text(fours+" stk",210,660-fours*20);         
-  rect(255,670,45,fives*-20);   text(fives+" stk",260,660-fives*20);         
-  rect(305,670,45,sixes*-20);   text(sixes+" stk",310,660-sixes*20);         
+  rect(55,670,45,en*-20);     text(en+" stk",60,660-ones*20);            //laver diagram.
+  rect(105,670,45,to*-20);    text(to+" stk",110,660-twos*20);           
+  rect(155,670,45,tre*-20);  text(tre+" stk",160,660-threes*20);       
+  rect(205,670,45,fire*-20);   text(fire+" stk",210,660-fours*20);         
+  rect(255,670,45,fem*-20);   text(fem+" stk",260,660-fives*20);         
+  rect(305,670,45,seks*-20);   text(seks+" stk",310,660-sixes*20);         
   textSize(20);
 }
