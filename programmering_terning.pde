@@ -1,5 +1,5 @@
 int[] numre = new int [31];  //indeholder vores terningekast
-int counter = 0;               //holder øje med hvilke tal vi nået til
+int c = 0;               //holder øje med hvilke tal vi nået til
 
 int en = 0;                  //tæller alle vores værdier fra 1-6
 int to = 0;                  
@@ -29,24 +29,24 @@ void keyPressed() {
   textSize(20);
   text("TRYK på 'i' FOR AT KASTE / OG 'l' FOR AT SLETTE", 50, 50);
 
-  if ((key=='i' || key == 'i') && counter < 30) {
-    counter++;                               //tallene stiger i værdi ved at klikke "i"
+  if ((key=='i' || key == 'i') && c < 30) {
+    c++;                               //tallene stiger i værdi ved at klikke "i"
     int kast = lavTerningeKast(1, 7);        
     text("DIT KAST BLEV:" + kast, 50, 75);
   }
 
-  if ((key == 'l' || key == 'l') && counter>0) {
+  if ((key == 'l' || key == 'l') && c>0) {
     fjernSidsteKast();                       //tallene ryger ned i værdi ved at klikke "l"
   }
   tegnFordeling();                          
   udskrivKast();                           
-  if(counter==0)text("DIT KAST BLEV: ", 50, 75);
-  if(counter==30)text("DIT KAST BLEV:"+numbers[counter], 50, 75);
+  if(c==0)text("DIT KAST BLEV: ", 50, 75);
+  if(c==30)text("DIT KAST BLEV:"+numbers[c], 50, 75);
 }
 
 int lavTerningeKast(int min, int max){        
   int nyKast = int(random(min,max));         //Laver terningekast tal.
-  numre[counter] = nyKast;                 
+  numre[c] = nyKast;                 
   
   if(nyKast==1)en++;                       //tjekker nye kast
   if(nyKast==2)to++;                       
@@ -58,21 +58,21 @@ int lavTerningeKast(int min, int max){
 }  
 
 void udskrivKast(){
-  for(int b=1;b<=counter;b++){                      //laver selve talrækken
+  for(int b=1;b<=c;b++){                      //laver selve talrækken
   text("Kast "+b+": "+numre[b],600,50+20*b);      //viser kastet
   }
 }
 
 void fjernSidsteKast(){
-  if(numre[counter]==1)en--;                    //fjerning af værdier(en ad gangen)'
-  if(numre[counter]==2)to--;                    
-  if(numre[counter]==3)tre--;                  
-  if(numre[counter]==4)fire--;                   
-  if(numre[counter]==5)fem--;                   
-  if(numre[counter]==6)seks--;                   
+  if(numre[c]==1)en--;                    //fjerning af værdier(en ad gangen)'
+  if(numre[c]==2)to--;                    
+  if(numre[c]==3)tre--;                  
+  if(numre[c]==4)fire--;                   
+  if(numre[c]==5)fem--;                   
+  if(numre[c]==6)seks--;                   
   
   counter--;                            
-  text("DIT KAST BLEV:" + numbre[counter], 50, 75); 
+  text("DIT KAST BLEV:" + numre[c], 50, 75); 
 }
 
 void tegnFordeling(){   
