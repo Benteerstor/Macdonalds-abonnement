@@ -24,7 +24,7 @@ void setup() {
 void draw() {
 }
 
-void keyPressed() {
+void keyP() {
   clear();
   textSize(20);
   text("TRYK på 'i' FOR AT KASTE / OG 'l' FOR AT SLETTE", 50, 50);
@@ -44,7 +44,7 @@ void keyPressed() {
   if(c==30)text("DIT KAST BLEV:"+numbers[c], 50, 75);
 }
 
-int lavTerningeKast(int min, int max){        
+int terningk(int min, int max){        
   int nyKast = int(random(min,max));         //Laver terningekast tal.
   numre[c] = nyKast;                 
   
@@ -57,13 +57,13 @@ int lavTerningeKast(int min, int max){
   return nyKast;
 }  
 
-void udskrivKast(){
+void udskriv(){
   for(int b=1;b<=c;b++){                      //laver selve talrækken
   text("Kast "+b+": "+numre[b],600,50+20*b);      //viser kastet
   }
 }
 
-void fjernSidsteKast(){
+void fjern(){
   if(numre[c]==1)en--;                    //fjerning af værdier(en ad gangen)'
   if(numre[c]==2)to--;                    
   if(numre[c]==3)tre--;                  
@@ -71,7 +71,7 @@ void fjernSidsteKast(){
   if(numre[c]==5)fem--;                   
   if(numre[c]==6)seks--;                   
   
-  counter--;                            
+  c--;                            
   text("DIT KAST BLEV:" + numre[c], 50, 75); 
 }
 
