@@ -75,7 +75,7 @@ void fjern(){
   text("DIT KAST BLEV:" + numre[c], 50, 75); 
 }
 
-void tegnFordeling(){   
+void tegnf(){   
   
   text("Fordeling af terningekast", 70, 750);       
   for(int b=1; b<=6; b++){                          //1-6 talrække
