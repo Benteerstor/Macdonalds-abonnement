@@ -31,7 +31,7 @@ void keyP() {
 
   if ((key=='i' || key == 'i') && c < 30) {
     c++;                               //tallene stiger i værdi ved at klikke "i"
-    int kast = lavTerningeKast(1, 7);        
+    int kast = TerningeKast(1, 7);        
     text("DIT KAST BLEV:" + kast, 50, 75);
   }
 
