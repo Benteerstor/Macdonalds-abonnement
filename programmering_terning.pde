@@ -64,12 +64,12 @@ void udskrivKast(){
 }
 
 void fjernSidsteKast(){
-  if(numbers[counter]==1)en--;                    //fjerning af værdier(en ad gangen)'
-  if(numbers[counter]==2)to--;                    
-  if(numbers[counter]==3)tre--;                  
-  if(numbers[counter]==4)fire--;                   
-  if(numbers[counter]==5)fem--;                   
-  if(numbers[counter]==6)seks--;                   
+  if(numre[counter]==1)en--;                    //fjerning af værdier(en ad gangen)'
+  if(numre[counter]==2)to--;                    
+  if(numre[counter]==3)tre--;                  
+  if(numre[counter]==4)fire--;                   
+  if(numre[counter]==5)fem--;                   
+  if(numre[counter]==6)seks--;                   
   
   counter--;                            
   text("DIT KAST BLEV:" + numbre[counter], 50, 75); 
